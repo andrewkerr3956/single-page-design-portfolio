@@ -1,0 +1,7 @@
+@mixin button-style {
+    border-radius: 28px;
+    padding: 14px 45px;
+    font-weight: 700;
+    font-size: 16px;
+    color: map-get($colors, "lightCream");
+}

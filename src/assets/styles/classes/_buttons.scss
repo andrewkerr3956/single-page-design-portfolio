@@ -1,0 +1,11 @@
+.btn {
+    @include button-style;
+    
+    &.btn-black {
+        background-color: map-get($colors, "black");
+    }
+    
+    &.btn-lightred {
+        background-color: map-get($colors, "lightRed");
+    }
+}
