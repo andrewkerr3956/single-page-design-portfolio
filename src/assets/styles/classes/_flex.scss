@@ -1,0 +1,39 @@
+.flex {
+    display: flex;
+    display: -ms-flexbox;
+}
+
+.flex-row {
+    @extend .flex;
+    flex-direction: row;
+}
+
+.flex-col {
+    @extend .flex;
+    flex-direction: column;
+}
+
+.flex-wrap {
+    @extend .flex;
+    flex-wrap: wrap;
+}
+
+.justify-start {
+    @extend .flex;
+    justify-content: flex-start;
+}
+
+.justify-center {
+    @extend .flex;
+    justify-content: center;
+}
+
+.justify-end {
+    @extend .flex;
+    justify-content: flex-end;
+}
+
+.justify-between {
+    @extend .flex;
+    justify-content: space-between;
+}

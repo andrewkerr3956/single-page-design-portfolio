@@ -1,3 +1,14 @@
 .layout-container {
     background-color: map-get($colors, "lightCream");
+    width: auto;
+    padding: 0 14.86%;
+    min-height: 100vh;
+}
+
+// About section
+.about-flex {
+    column-gap: 12.5%;
+    >img {
+        width: 30%;
+    }
 }
