@@ -4,16 +4,24 @@
     &:hover {
         cursor: pointer;
     }
-    
-    &.btn-black {
-        background-color: map-get($colors, "black");
+}
 
-        &:hover {
-           background-color: map-get($colors, "galacticBlue"); 
-        }
+.btn-black {
+    @extend .btn;
+
+    background-color: map-get($colors, "black");
+
+    &:hover {
+       background-color: map-get($colors, "galacticBlue"); 
     }
-    
-    &.btn-lightRed {
-        background-color: map-get($colors, "lightRed");
+}
+
+.btn-lightRed {
+    @extend .btn;
+
+    background-color: map-get($colors, "lightRed");
+
+    &:hover {
+        background-color: map-get($colors, "summerYellow");
     }
 }

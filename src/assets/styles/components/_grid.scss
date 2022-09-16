@@ -1,12 +1,11 @@
 .grid-container {
     display: grid;
     display: -ms-grid;
-    min-height: 364px;
-    height: 30vh;
+    height: 364px;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2, auto);
-    column-gap: 25px;
-    row-gap: 25px;
+    column-gap: 24px;
+    row-gap: 24px;
 }
 
 .grid-box {
@@ -15,7 +14,6 @@
     display: block;
     width: auto;
     height: auto;
-    color: #FFFFFF;
 
     .inner-grid-box {
         display: flex;
@@ -30,6 +28,11 @@
             // Using column, align to the right
             align-self: flex-end;
             -ms-flex-item-align: flex-end;
+        }
+        >figcaption {
+            color: #FFFFFF;
+            font-size: 24px;
+            font-weight: 700;
         }
     }
 }
