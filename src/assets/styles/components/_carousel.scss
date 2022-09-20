@@ -1,7 +1,11 @@
 .work-carousel-container {
-    width: 175vw;
-    margin-left: calc(-760px);
+    width: 200vw;
     display: inline-block;
+    transform: translateX(-56vw);
+    -webkit-transform: translateX(-56vw);
+    -o-transform: translateX(-56vw);
+    -moz-transform: translateX(-56vw);
+    -ms-transform: translateX(-56vw);
     overflow-x: clip;
     row-gap: 56px;
 }
@@ -11,7 +15,8 @@
 
     .work-carousel-item {
         height: 360px;
-        width: 540px;
+        min-width: 540px;
+        max-width: 540px;
 
         >img {
             width: 100%;

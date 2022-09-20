@@ -6,6 +6,17 @@
     grid-template-rows: repeat(2, auto);
     column-gap: 24px;
     row-gap: 24px;
+
+    @media screen and (max-width: 850px) {
+        height: 570px;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+    }
+
+    @media screen and (max-width: 600px) {
+        height: auto;
+        grid-template-columns: auto; // One column
+    }
 }
 
 .grid-box {
@@ -38,7 +49,7 @@
 }
 
 .full-col {
-    // Takes up both rows
+    // Takes up both rows. First item in the grid
     grid-row: 1 / 3;
 }
 

@@ -14,14 +14,30 @@ h1 {
     font-size: 56px;
     line-height: 70px;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: map-get($breakpoints, "md")) {
         font-size: 44px;
+        line-height: normal;
+    }
+
+    @media screen and (max-width: map-get($breakpoints, "xs")) {
+        font-size: 36px;
+        line-height: normal;
     }
 }
 
 h2 {
     font-size: 40px;
     line-height: 51px;
+
+    @media screen and (max-width: map-get($breakpoints, "md")) {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    @media screen and (max-width: map-get($breakpoints, "sm")) {
+        font-size: 26px;
+        line-height: normal;
+    }
 }
 
 h3 {

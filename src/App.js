@@ -19,7 +19,7 @@ function App() {
       <main>
         <section style={{ textAlign: "center" }} name="intro">
           <h1>Design solutions made easy</h1>
-          <p style={{ margin: "24px auto 80px auto", width: "65%" }}>With over ten years of experience in various design disciplines, I'm your one-stop shop for your design needs.</p>
+          <p>With over ten years of experience in various design disciplines, I'm your one-stop shop for your design needs.</p>
         </section>
         <section name="experience">
           <Grid />
@@ -30,7 +30,7 @@ function App() {
             <div className="flex-col h-75 justify-between">
               <h2>I’m Amy, and I’d love to work on your next project</h2>
               <p style={{ marginTop: "34px" }}>I love working with others to create beautiful design solutions. I’ve designed everything from brand illustrations to complete mobile apps. I’m also handy with a camera!</p>
-              <button type="button" style={{ marginTop: "32px" }} className="btn btn-lightRed w-50" aria-label="Free Consultation">Free Consultation</button>
+              <button type="button" style={{ marginTop: "32px" }} className="btn btn-lightRed" aria-label="Free Consultation">Free Consultation</button>
             </div>
           </div>
         </section>
