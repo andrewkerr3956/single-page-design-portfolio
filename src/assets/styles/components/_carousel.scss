@@ -1,11 +1,11 @@
 .work-carousel-container {
-    width: 200vw;
+    width: calc(100vw + 1000px);
     display: inline-block;
-    transform: translateX(-56vw);
-    -webkit-transform: translateX(-56vw);
-    -o-transform: translateX(-56vw);
-    -moz-transform: translateX(-56vw);
-    -ms-transform: translateX(-56vw);
+    transform: translateX(-50vw);
+    -webkit-transform: translateX(-50vw);
+    -o-transform: translateX(-50vw);
+    -moz-transform: translateX(-50vw);
+    -ms-transform: translateX(-50vw);
     overflow-x: clip;
     row-gap: 56px;
 }

@@ -5,9 +5,7 @@ import ImageSlide2 from './assets/image-slide-2.jpg';
 import ImageSlide3 from './assets/image-slide-3.jpg';
 import ImageSlide4 from './assets/image-slide-4.jpg';
 import ImageSlide5 from './assets/image-slide-5.jpg';
-import CarouselItem from './assets/components/CarouselItem';
-import LeftArrowIcon from './assets/icon-arrow-left.svg';
-import RightArrowIcon from './assets/icon-arrow-right.svg';
+import {Carousel, CarouselItem} from './assets/components/Carousel';
 import './assets/styles/main.scss';
 import { Header, Footer } from './assets/components/Navigation';
 import Grid from './assets/components/Grid';
@@ -37,17 +35,13 @@ function App() {
         <section className="flex-col justify-center" style={{ marginTop: "88px", textAlign: "center" }} name="work">
           <h3>My Work</h3>
           <div className="work-carousel-container">
-            <div className="work-carousel flex-row">
-              <CarouselItem img={ImageSlide1} />
-              <CarouselItem img={ImageSlide2} />
-              <CarouselItem img={ImageSlide3} />
-              <CarouselItem img={ImageSlide4} />
-              <CarouselItem img={ImageSlide5} />
-            </div>
-          </div>
-          <div className="scroll-buttons flex-row justify-center">
-            <button type="button" aria-label="Left"><img src={LeftArrowIcon} alt="Left Arrow" /></button>
-            <button type="button" aria-label="Right"><img src={RightArrowIcon} alt="Right Arrow" /></button>
+            <Carousel>
+              <CarouselItem img={ImageSlide1} slide={1} />
+              <CarouselItem img={ImageSlide2} slide={2} />
+              <CarouselItem img={ImageSlide3} slide={3} />
+              <CarouselItem img={ImageSlide4} slide={4} />
+              <CarouselItem img={ImageSlide5} slide={5} />
+            </Carousel>
           </div>
         </section>
         <section style={{ marginTop: "88px"}} name="book-call">

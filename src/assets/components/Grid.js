@@ -15,7 +15,7 @@ const Grid = () => {
                     <figcaption>Graphic Design</figcaption>
                 </div>
             </figure>
-            <div class="multi-col flex-row">
+            <div className="multi-col flex-row">
                 <figure className="bg-summerYellow grid-box">
                     <div className="inner-grid-box">
                         <img src={UIUXIcon} alt="" />
