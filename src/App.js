@@ -1,11 +1,6 @@
 import logo from './logo.svg';
 import AmyPicture from './assets/image-amy.webp';
-import ImageSlide1 from './assets/image-slide-1.jpg';
-import ImageSlide2 from './assets/image-slide-2.jpg';
-import ImageSlide3 from './assets/image-slide-3.jpg';
-import ImageSlide4 from './assets/image-slide-4.jpg';
-import ImageSlide5 from './assets/image-slide-5.jpg';
-import {Carousel, CarouselItem} from './assets/components/Carousel';
+import Carousel from './assets/components/Carousel';
 import './assets/styles/main.scss';
 import { Header, Footer } from './assets/components/Navigation';
 import Grid from './assets/components/Grid';
@@ -23,7 +18,7 @@ function App() {
           <Grid />
         </section>
         <section style={{ marginTop: "136px" }} name="about">
-          <div className="about-flex flex-row justify-between align-center">
+          <div className="about-flex flex-row align-center">
             <img src={AmyPicture} alt="Picture of Amy" />
             <div className="flex-col h-75 justify-between">
               <h2>I’m Amy, and I’d love to work on your next project</h2>
@@ -34,17 +29,9 @@ function App() {
         </section>
         <section className="flex-col justify-center" style={{ marginTop: "88px", textAlign: "center" }} name="work">
           <h3>My Work</h3>
-          <div className="work-carousel-container">
-            <Carousel>
-              <CarouselItem img={ImageSlide1} slide={1} />
-              <CarouselItem img={ImageSlide2} slide={2} />
-              <CarouselItem img={ImageSlide3} slide={3} />
-              <CarouselItem img={ImageSlide4} slide={4} />
-              <CarouselItem img={ImageSlide5} slide={5} />
-            </Carousel>
-          </div>
+          <Carousel />
         </section>
-        <section style={{ marginTop: "88px"}} name="book-call">
+        <section style={{ marginTop: "88px" }} name="book-call">
           <div className="book-call-container flex-row justify-between align-center">
             <div className="book-call-text flex-col">
               <h2>Book a call with me</h2>

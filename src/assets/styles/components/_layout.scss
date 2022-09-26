@@ -4,7 +4,7 @@
     max-width: 1100px;
     min-height: 100vh;
     padding: 0 40px 0 40px;
-    
+
     @media screen and (max-width: map-get($breakpoints, "sm")) {
         padding: 0 16px 0 16px;
     }
@@ -39,19 +39,25 @@ section[name="intro"] {
     >p {
         width: 63%;
         margin: 24px auto 80px auto;
+        @media screen and (max-width: map-get($breakpoints, "md")) {
+            width: 80%;
+        }
+        @media screen and (max-width: map-get($breakpoints, "sm")) {
+            width: 100%;
+        }
     }
 }
 
 // About section
 .about-flex {
     column-gap: 125px;
+
     >img {
         width: 445px;
         height: 445px;
 
-        @media screen and (max-width: map-get($breakpoints, "lg")) {
-            width: 404.5px;
-            height: 404.5px;
+        @media screen and (max-width: 950px) {
+            transform: translateX(-25%);
         }
 
         @media screen and (max-width: map-get($breakpoints, "md")) {
@@ -59,14 +65,35 @@ section[name="intro"] {
             height: 364px;
         }
 
-        @media screen and (max-width: calc(map-get($breakpoints, "md") - 30px )) {
-            width: 323.5px;
-            height: 323.5px;
+        @media screen and (max-width: map-get($breakpoints, "sm")) {
+            height: 300px;
+            width: 300px;
+        }
+
+        @media screen and (max-width: calc(map-get($breakpoints, "xs") - 1px)) {
+            height: 100%;
+            width: 100%;
         }
     }
 
-    div.flex-col>p {
-        width: 95%;
+    div.flex-col {
+        >p {
+            width: 95%;
+
+            @media screen and (max-width: 950px) {
+                width: 100%;
+            }
+
+            @media screen and (max-width: map-get($breakpoints, "sm")) {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: map-get($breakpoints, "sm")) {
+            align-items: center;
+            -ms-flex-align: center;
+        }
+
     }
 
     @media screen and (max-width: map-get($breakpoints, "lg")) {
@@ -77,7 +104,7 @@ section[name="intro"] {
         column-gap: 69px;
     }
 
-    @media screen and (max-width: map-get($breakpoints, "sm")) {
+    @media screen and (max-width: 700px) {
         // Force the direction change, row doesn't work well here at lower screen sizes.
         flex-direction: column;
         -ms-flex-direction: column;
@@ -92,6 +119,10 @@ section[name="intro"] {
 // Work section
 section[name="work"] {
     row-gap: 56px;
+
+    @media screen and (max-width: map-get($breakpoints, "sm")) {
+        row-gap: 32px;
+    }
 }
 
 // Book a call section
@@ -99,10 +130,12 @@ section[name="work"] {
     background-color: map-get($colors, "black");
     border-radius: 10px;
     padding: 80px 95px 80px 65px;
+
     .book-call-text {
         color: map-get($colors, "lightCream");
         row-gap: 25px;
         width: 58%;
+
         >p {
             color: map-get($colors, "lightCream");
         }
@@ -120,7 +153,7 @@ section[name="work"] {
         padding: 60px 70px 60px 70px;
     }
 
-    @media screen and (max-width: map-get($breakpoints, "xs")) {
+    @media screen and (max-width: map-get($breakpoints, "sm")) {
         padding: 49px 24px 49px 24px;
     }
 }

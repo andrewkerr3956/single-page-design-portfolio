@@ -1,31 +1,40 @@
 import { useEffect, useState } from "react";
 import LeftArrowIcon from '../icon-arrow-left.svg';
 import RightArrowIcon from '../icon-arrow-right.svg';
+import ImageSlide1 from '../image-slide-1.jpg';
+import ImageSlide2 from '../image-slide-2.jpg';
+import ImageSlide3 from '../image-slide-3.jpg';
+import ImageSlide4 from '../image-slide-4.jpg';
+import ImageSlide5 from '../image-slide-5.jpg';
 const Carousel = (props) => {
-    // Retrieve the slides in the "My Work" carousel. There should be 5 carousel slides (up to index of 4).
-    const carouselItems = document.getElementsByClassName("work-carousel-item");
 
-    // Initialize the current slide and have it start at slide 3 (index 2).
-    const [currentItem, setCurrentItem] = useState(2);
-    const [itemsInView, setItemsInView] = useState([currentItem-1, currentItem, currentItem+1]);
+    // Initialize the carousel.
+    const [carouselItems, setCarouselItems] = useState([<CarouselItem key={1} img={ImageSlide1} slide={1} />,
+    <CarouselItem key={2} img={ImageSlide2} slide={2} />,
+    <CarouselItem key={3} img={ImageSlide3} slide={3} />,
+    <CarouselItem key={4} img={ImageSlide4} slide={4} />,
+    <CarouselItem key={5} img={ImageSlide5} slide={5} />]);
 
-    const validateSlide = (dir="left") => {
-        let testCurrentItem = currentItem;
-        switch(dir) {
+    useEffect(() => {
+        console.log("CAROUSEL ITEMS CHANGED: " + carouselItems);
+    }, carouselItems)
+
+    const validateSlide = async(dir = "left") => {
+        let currentCarousel = Array.from(carouselItems);
+        let reorderCarousel;
+        console.log("Validating " + dir);
+        console.warn(carouselItems);
+        switch (dir) {
             case "left": {
-                let prevItem = testCurrentItem--;
-                if(--testCurrentItem < 0) {
-                    prevItem = carouselItems.length - 1;
-                }
-                setCurrentItem(prevItem);
+                reorderCarousel = currentCarousel.pop();
+                currentCarousel.unshift(reorderCarousel);
+                setCarouselItems(currentCarousel);
                 break;
             }
             case "right": {
-                let nextItem = testCurrentItem++;
-                if(++testCurrentItem > carouselItems.length - 1) {
-                    nextItem = 0;
-                }
-                setCurrentItem(nextItem);
+                reorderCarousel = currentCarousel.shift();
+                currentCarousel.push(reorderCarousel);
+                setCarouselItems(currentCarousel);
                 break;
             }
             case "*": {
@@ -36,14 +45,14 @@ const Carousel = (props) => {
     }
 
     return (
-        <>
-            <div className="work-container flex-row">
-                {props.children}
+        <div className="work-carousel-container">
+            <div id="carousel-items" className="work-carousel flex-row justify-center">
+                {carouselItems}
             </div>
             <div className="scroll-buttons flex-row justify-center">
                 <CarouselControls validateSlide={validateSlide} />
             </div>
-        </>
+        </div>
     )
 }
 
@@ -64,4 +73,4 @@ const CarouselControls = (props) => {
     )
 }
 
-export { Carousel, CarouselItem };
+export default Carousel;
