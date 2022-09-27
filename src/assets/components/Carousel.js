@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import LeftArrowIcon from '../icon-arrow-left.svg';
 import RightArrowIcon from '../icon-arrow-right.svg';
 import ImageSlide1 from '../image-slide-1.jpg';
@@ -14,10 +14,6 @@ const Carousel = (props) => {
     <CarouselItem key={3} img={ImageSlide3} slide={3} />,
     <CarouselItem key={4} img={ImageSlide4} slide={4} />,
     <CarouselItem key={5} img={ImageSlide5} slide={5} />]);
-
-    useEffect(() => {
-        console.log("CAROUSEL ITEMS CHANGED: " + carouselItems);
-    }, carouselItems)
 
     const validateSlide = async(dir = "left") => {
         let currentCarousel = Array.from(carouselItems);
@@ -37,7 +33,7 @@ const Carousel = (props) => {
                 setCarouselItems(currentCarousel);
                 break;
             }
-            case "*": {
+            default: {
                 console.error("There was an error handling the carousel scroll buttons.");
                 break;
             }

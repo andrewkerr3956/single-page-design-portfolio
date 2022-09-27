@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import AmyPicture from './assets/image-amy.webp';
 import Carousel from './assets/components/Carousel';
 import './assets/styles/main.scss';
@@ -17,21 +16,21 @@ function App() {
         <section name="experience">
           <Grid />
         </section>
-        <section style={{ marginTop: "136px" }} name="about">
+        <section name="about">
           <div className="about-flex flex-row align-center">
-            <img src={AmyPicture} alt="Picture of Amy" />
+            <img src={AmyPicture} alt="Amy with a colorful background" />
             <div className="flex-col h-75 justify-between">
               <h2>I’m Amy, and I’d love to work on your next project</h2>
-              <p style={{ marginTop: "34px" }}>I love working with others to create beautiful design solutions. I’ve designed everything from brand illustrations to complete mobile apps. I’m also handy with a camera!</p>
-              <button type="button" style={{ marginTop: "32px" }} className="btn btn-lightRed" aria-label="Free Consultation">Free Consultation</button>
+              <p>I love working with others to create beautiful design solutions. I’ve designed everything from brand illustrations to complete mobile apps. I’m also handy with a camera!</p>
+              <button type="button" className="btn btn-lightRed" aria-label="Free Consultation">Free Consultation</button>
             </div>
           </div>
         </section>
-        <section className="flex-col justify-center" style={{ marginTop: "88px", textAlign: "center" }} name="work">
+        <section className="flex-col justify-center" style={{ textAlign: "center" }} name="work">
           <h3>My Work</h3>
           <Carousel />
         </section>
-        <section style={{ marginTop: "88px" }} name="book-call">
+        <section name="book-call">
           <div className="book-call-container flex-row justify-between align-center">
             <div className="book-call-text flex-col">
               <h2>Book a call with me</h2>
