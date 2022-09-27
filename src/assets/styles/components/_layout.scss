@@ -54,7 +54,7 @@ section[id="intro"] {
 }
 
 // About section
-section[name="about"] {
+section[id="about"] {
     margin-top: 136px;
 
     @media screen and (max-width: map-get($breakpoints, "sm")) {

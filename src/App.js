@@ -16,7 +16,7 @@ function App() {
         <section id="experience">
           <Grid />
         </section>
-        <section name="about">
+        <section id="about">
           <div className="about-flex flex-row align-center">
             <img src={AmyPicture} alt="Amy with a colorful background" />
             <div className="flex-col h-75 justify-between">
