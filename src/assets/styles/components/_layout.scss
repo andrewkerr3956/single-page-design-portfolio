@@ -39,7 +39,7 @@ footer {
 }
 
 // Intro section
-section[name="intro"] {
+section[id="intro"] {
     >p {
         width: 63%;
         margin: 24px auto 80px auto;
@@ -171,7 +171,7 @@ section[name="about"] {
 }
 
 // Work section
-section[name="work"] {
+section[id="work"] {
     row-gap: 56px;
     margin-top: 88px;
     @media screen and (max-width: map-get($breakpoints, "sm")) {
@@ -181,7 +181,7 @@ section[name="work"] {
 }
 
 // Book a call section
-section[name="book-call"] {
+section[id="book-call"] {
     margin-top: 88px;
 
     @media screen and (max-width: map-get($breakpoints, "sm")) {

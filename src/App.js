@@ -9,11 +9,11 @@ function App() {
     <div className="layout-container">
       <Header />
       <main>
-        <section style={{ textAlign: "center" }} name="intro">
+        <section style={{ textAlign: "center" }} id="intro">
           <h1>Design solutions made easy</h1>
           <p>With over ten years of experience in various design disciplines, I'm your one-stop shop for your design needs.</p>
         </section>
-        <section name="experience">
+        <section id="experience">
           <Grid />
         </section>
         <section name="about">
@@ -26,11 +26,11 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="flex-col justify-center" style={{ textAlign: "center" }} name="work">
+        <section className="flex-col justify-center" style={{ textAlign: "center" }} id="work">
           <h3>My Work</h3>
           <Carousel />
         </section>
-        <section name="book-call">
+        <section id="book-call">
           <div className="book-call-container flex-row justify-between align-center">
             <div className="book-call-text flex-col">
               <h2>Book a call with me</h2>
